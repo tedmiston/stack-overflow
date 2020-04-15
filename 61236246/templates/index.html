@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<body>
+
+  <label for="result_bar">Progress:</label>
+  <progress id="result_bar" max="{{ max }}" value="{{ value }}"></progress>
+
+  <hr>
+
+  <p>Update progress:</p>
+  <form action="/progress" method="post">
+    <input type="number" name="value" value="{{ value }}">
+    <input type="number" name="max" value="{{ max }}">
+    <input type="submit" value="Update">
+  </form>
+
+</body>
+</html>
